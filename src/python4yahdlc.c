@@ -162,7 +162,7 @@ PyMODINIT_FUNC PyInit_yahdlc(void)
         return NULL;
 
     Yahdlc_MessageError = PyErr_NewException("yahdlc.MessageError", NULL, NULL);
-    Py_INCREF(Yahdlc_MessageError);
+    Py_XINCREF(Yahdlc_MessageError);
     if (PyModule_AddObject(m, "MessageError", Yahdlc_MessageError) < 0) {
       Py_XDECREF(Yahdlc_MessageError);
       Py_CLEAR(Yahdlc_MessageError);
@@ -171,7 +171,7 @@ PyMODINIT_FUNC PyInit_yahdlc(void)
     }
 
     Yahdlc_FCSError = PyErr_NewException("yahdlc.FCSError", NULL, NULL);
-    Py_INCREF(Yahdlc_FCSError);
+    Py_XINCREF(Yahdlc_FCSError);
     if (PyModule_AddObject(m, "FCSError", Yahdlc_FCSError) < 0) {
       Py_XDECREF(Yahdlc_FCSError);
       Py_CLEAR(Yahdlc_FCSError);
