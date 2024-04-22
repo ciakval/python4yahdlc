@@ -41,7 +41,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5.1.0
         with:
-          python-version-file: setup.cfg
+          python-version-file: pyproject.toml
 
       - name: Install dependencies
         run: |
